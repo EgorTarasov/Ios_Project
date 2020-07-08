@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BLM-Hw-ucF">
-                                <rect key="frame" x="152.66666666666666" y="450" width="108.99999999999997" height="32"/>
+                                <rect key="frame" x="154.66666666666666" y="450" width="104.99999999999997" height="32"/>
                                 <segments>
-                                    <segment title="Goals"/>
-                                    <segment title="Ideas"/>
+                                    <segment title="Цели"/>
+                                    <segment title="Идеи"/>
                                 </segments>
                                 <connections>
                                     <action selector="MainSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mw7-dN-j7I"/>
@@ -67,13 +67,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Идея💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAH-iz-tPa">
-                                <rect key="frame" x="57" y="268" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46p-42-0MB">
                                 <rect key="frame" x="180" y="342.33333333333337" width="55" height="50"/>
                                 <state key="normal" backgroundImage="folder" catalog="system">
@@ -83,17 +76,41 @@
                                     <action selector="AddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwl-M8-JjE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сюда можно записать идеи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xph-c3-dvS">
+                                <rect key="frame" x="95" y="237" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxF-UF-OcE">
+                                <rect key="frame" x="153" y="401" width="108.99999999999997" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="NX1-VG-E8e"/>
+                                </constraints>
+                                <state key="normal" title="Очистить Идеи">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ReserIdeas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uek-Uv-y7H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lUB-98-AeP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4cj-gA-8EP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cJS-dd-7Vf" secondAttribute="bottom" constant="108" id="9W5-L9-zaP"/>
+                            <constraint firstItem="Xph-c3-dvS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ALO-dx-w37"/>
+                            <constraint firstItem="qvu-Kl-27E" firstAttribute="top" secondItem="Xph-c3-dvS" secondAttribute="bottom" constant="30.666666666666686" id="Csp-yP-8c0"/>
                             <constraint firstItem="qvu-Kl-27E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EIl-Gi-Cd3"/>
                             <constraint firstItem="Fx9-rd-14z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hil-f3-12t"/>
                             <constraint firstItem="46p-42-0MB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JqS-JR-Mgn"/>
+                            <constraint firstItem="OxF-UF-OcE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NCG-Z7-Ye1"/>
                             <constraint firstItem="cJS-dd-7Vf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O6o-Fp-cXM"/>
                             <constraint firstItem="dkh-Wo-aDz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RxE-tR-jbO"/>
                             <constraint firstItem="Mvg-bV-4YF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XOr-9M-RqM"/>
+                            <constraint firstItem="OxF-UF-OcE" firstAttribute="top" secondItem="46p-42-0MB" secondAttribute="bottom" constant="7.3333333333332575" id="nDD-I3-i2h"/>
                             <constraint firstItem="Fx9-rd-14z" firstAttribute="top" secondItem="BLM-Hw-ucF" secondAttribute="bottom" constant="68" id="omU-ls-Cxt"/>
                             <constraint firstItem="46p-42-0MB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1P-sR-sqL"/>
                             <constraint firstItem="46p-42-0MB" firstAttribute="top" secondItem="qvu-Kl-27E" secondAttribute="bottom" constant="35" id="q6H-bF-n1A"/>

@@ -57,6 +57,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshDataSet(Labels, data : Ideas)
+        clearLabels(Labels)
+
         // Do any additional setup after loading the view.
     }
     
@@ -74,8 +78,8 @@ class ViewController: UIViewController {
                 Labels[0].text = "No Ideas"
             }
             else{
-                print(Ideas.count)
-                print(Ideas)
+                //print(Ideas.count)
+                //print(Ideas)
                 refreshDataSet(Labels, data : Ideas)
                 //for (index, string) in Ideas.enumerated(){
                 //    Labels[index].text = string
@@ -95,20 +99,35 @@ class ViewController: UIViewController {
     
     
     @IBAction func AddButton(_ sender: UIButton) {
+        
         let new_idea = IdeaInput.text
         
         if let str_idea = new_idea {
             if Ideas.count + 1 == Labels.count{
                 showAlert(tittle: "Maximum number of Ideas", message: "")
             }
+            else if str_idea == ""{
+                showAlert(tittle: "Text field is empty", message: " ")
+            }
             else if Ideas.contains(str_idea){
-                showAlert(tittle: "Already exsisting", message: " ")
+                showAlert(tittle: "Already exsisting Idea", message: " ")
             }
             else{
                 Ideas.insert(str_idea)
+                clearLabels(Labels)
+                refreshDataSet(Labels, data : Ideas)    
             }
             
         }
+        else{
+            showAlert(tittle: "New idea error", message: "Не знаю как и почему видимо Optional не обработался ")
+        }
+    }
+    
+    @IBAction func ReserIdeas(_ sender: UIButton) {
+        Ideas = []
+        clearLabels(Labels)
+        Labels[0].text = "No Ideas"
     }
     
 
