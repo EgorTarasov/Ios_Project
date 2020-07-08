@@ -25,9 +25,15 @@ class ViewController: UIViewController {
         }
     }
     
-    func refreshData(_ Labels : [UILabel], data : [object]){
+    func refreshDataObjects(_ Labels : [UILabel], data : [object]){
         for (index, object) in data.enumerated(){
             Labels[index].text = object.Name
+        }
+    }
+    
+    func refreshDataSet(_ Labels : [UILabel], data : Set<String>){
+        for (index, string) in data.enumerated(){
+            Labels[index].text = string
         }
     }
     
@@ -47,7 +53,7 @@ class ViewController: UIViewController {
     var goal = ["Найти команду", "Найти интересную идею"]
     //, "Научиться нормально делать приложения"
 
-    var Ideas : Set = [" "]
+    var Ideas : Set<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,16 +74,20 @@ class ViewController: UIViewController {
                 Labels[0].text = "No Ideas"
             }
             else{
-                print("!!!")
-                for (index, string) in Ideas.enumerated(){
-                    Labels[index].text = string
-                }
+                print(Ideas.count)
+                print(Ideas)
+                refreshDataSet(Labels, data : Ideas)
+                //for (index, string) in Ideas.enumerated(){
+                //    Labels[index].text = string
+                //}
             }
             
         default:
             //print("Goals count \(Goals.count)")
             //print(Labels.count)
             clearLabels(Labels)
+            refreshDataObjects(Labels, data : Goals)
+            
             
         }
         
@@ -88,7 +98,10 @@ class ViewController: UIViewController {
         let new_idea = IdeaInput.text
         
         if let str_idea = new_idea {
-            if Ideas.contains(str_idea){
+            if Ideas.count + 1 == Labels.count{
+                showAlert(tittle: "Maximum number of Ideas", message: "")
+            }
+            else if Ideas.contains(str_idea){
                 showAlert(tittle: "Already exsisting", message: " ")
             }
             else{

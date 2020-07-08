@@ -15,18 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46p-42-0MB">
-                                <rect key="frame" x="192" y="353" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="AddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwl-M8-JjE"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BLM-Hw-ucF">
                                 <rect key="frame" x="152.66666666666666" y="450" width="108.99999999999997" height="32"/>
                                 <segments>
-                                    <segment title="Ideas"/>
                                     <segment title="Goals"/>
+                                    <segment title="Ideas"/>
                                 </segments>
                                 <connections>
                                     <action selector="MainSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mw7-dN-j7I"/>
@@ -67,14 +60,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvu-Kl-27E">
-                                <rect key="frame" x="132" y="261" width="150" height="34"/>
+                                <rect key="frame" x="132" y="288.66666666666669" width="150" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="WXd-LB-lPM"/>
                                     <constraint firstAttribute="width" constant="150" id="mXw-fi-hx2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Идея💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAH-iz-tPa">
+                                <rect key="frame" x="57" y="268" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46p-42-0MB">
+                                <rect key="frame" x="180" y="342.33333333333337" width="55" height="50"/>
+                                <state key="normal" backgroundImage="folder" catalog="system">
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwl-M8-JjE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -82,13 +90,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cJS-dd-7Vf" secondAttribute="bottom" constant="108" id="9W5-L9-zaP"/>
                             <constraint firstItem="qvu-Kl-27E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EIl-Gi-Cd3"/>
                             <constraint firstItem="Fx9-rd-14z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hil-f3-12t"/>
-                            <constraint firstItem="46p-42-0MB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nla-db-JVA"/>
+                            <constraint firstItem="46p-42-0MB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JqS-JR-Mgn"/>
                             <constraint firstItem="cJS-dd-7Vf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O6o-Fp-cXM"/>
                             <constraint firstItem="dkh-Wo-aDz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RxE-tR-jbO"/>
                             <constraint firstItem="Mvg-bV-4YF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XOr-9M-RqM"/>
-                            <constraint firstItem="46p-42-0MB" firstAttribute="top" secondItem="qvu-Kl-27E" secondAttribute="bottom" constant="58" id="dcx-eQ-2OS"/>
-                            <constraint firstItem="46p-42-0MB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dzK-Im-1xV"/>
                             <constraint firstItem="Fx9-rd-14z" firstAttribute="top" secondItem="BLM-Hw-ucF" secondAttribute="bottom" constant="68" id="omU-ls-Cxt"/>
+                            <constraint firstItem="46p-42-0MB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1P-sR-sqL"/>
+                            <constraint firstItem="46p-42-0MB" firstAttribute="top" secondItem="qvu-Kl-27E" secondAttribute="bottom" constant="35" id="q6H-bF-n1A"/>
                             <constraint firstItem="dkh-Wo-aDz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="tLM-bI-BQ3"/>
                             <constraint firstItem="BLM-Hw-ucF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tbf-oI-pfO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fx9-rd-14z" secondAttribute="bottom" constant="166" id="vIM-b3-SDd"/>
@@ -110,4 +118,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="folder" catalog="system" width="128" height="95"/>
+    </resources>
 </document>
